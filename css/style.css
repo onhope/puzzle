@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --facebookColor : #3b5998;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-time {
+  margin-top: 3rem;
+  font-size: 2rem;
+  color: var(--facebookColor);
+}
+
+ul {
+  list-style: none;
+  margin-top: 1rem;
+  border: 2px solid var(--facebookColor);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+li {
+  width: 100px;
+  height: 100px;
+  color: #ccc;
+  background: url('https://picsum.photos/400/400');
+}
+
+li.list0 {
+  background-position-x: 0px;
+  background-position-y: 0px;
+}
+li.list1 {
+  background-position-x: -100px;
+  background-position-y: 0px;
+}
+li.list2 {
+  background-position-x: -200px;
+  background-position-y: 0px;
+}
+li.list3 {
+  background-position-x: -300px;
+  background-position-y: 0px;
+}
+li.list4 {
+  background-position-x: 0px;
+  background-position-y: -100px;
+}
+li.list5 {
+  background-position-x: -100px;
+  background-position-y: -100px;
+}
+li.list6 {
+  background-position-x: -200px;
+  background-position-y: -100px;  
+}
+li.list7 {
+  background-position-x: -300px;
+  background-position-y: -100px;    
+}
+li.list8 {
+  background-position-x: 0px;
+  background-position-y: -200px;
+}
+li.list9 {
+  background-position-x: -100px;
+  background-position-y: -200px;
+}
+li.list10 {
+  background-position-x: -200px;
+  background-position-y: -200px;
+}
+li.list11 {
+  background-position-x: -300px;
+  background-position-y: -200px;
+}
+li.list12 {
+  background-position-x: 0px;
+  background-position-y: -300px;  
+}
+li.list13 {
+  background-position-x: -100px;
+  background-position-y: -300px;    
+}
+li.list14 {
+  background-position-x: -200px;
+  background-position-y: -300px;  
+}
+li.list15 {
+  background-position-x: -300px;
+  background-position-y: -300px;    
+}
+
+.start-buton {
+  margin-top: 1rem;
+  border: none;
+  padding: 1rem 2rem;
+  background-color: var(--facebookColor);
+  color: #fff;
+  border-radius: 10px;
+}
