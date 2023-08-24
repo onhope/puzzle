@@ -100,11 +100,18 @@ li.list15 {
   background-position-y: -300px;    
 }
 
-.start-buton {
+.start-buton , .cheat-key {
   margin-top: 1rem;
   border: none;
   padding: 1rem 2rem;
   background-color: var(--facebookColor);
   color: #fff;
   border-radius: 10px;
+}
+
+.game-text {
+  position: absolute;
+  font-size: 45px;
+  color: red;
+  display: none;
 }
