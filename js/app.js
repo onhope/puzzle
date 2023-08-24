@@ -43,7 +43,15 @@ function shuffle(array) {
 }
 
 function checkStatus() {
-  clearInterval(timeInterval);
+  const currentList = [...container.children];
+  const unMatched =  currentList.filter((list, index) => {
+    return Number(list.getAttribute("data-type")) !== index;
+  })   
+  if (unMatched.length === 0) {
+    isPlaying = false;
+    clearInterval(timeInterval);    
+  }
+  console.log(unMatched);
 }
 
 container.addEventListener("dragstart", e => {
@@ -64,10 +72,12 @@ container.addEventListener("drop", e => {
     originPlace = dragged.el.nextSibling;
   }else {
     originPlace = dragged.el.previousSibling;
-    isLast = True;
+    isLast = true;
   }
   const droppedIndex = ([...obj.parentNode.children].indexOf(obj)); // 드롭된 위치의 인덱스를 반환
   // console.log(droppedIndex);
   dragged.index > droppedIndex ? obj.before(dragged.el) : obj.after(dragged.el);  
   isLast ? originPlace.after(obj) : originPlace.before(obj);
+
+  checkStatus();
 })
