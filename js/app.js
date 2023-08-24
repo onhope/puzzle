@@ -2,6 +2,7 @@ const container = document.querySelector(".image-container");
 const StartButton = document.querySelector(".start-buton");
 const playTime = document.querySelector(".play-time");
 const gameText = document.querySelector(".game-text");
+const tiles = document.querySelectorAll(".image-container > li");
 
 let isPlaying = false;
 let time = 0;
@@ -23,6 +24,26 @@ function setGame() {
     time++;
     playTime.innerText = time;
   }, 1000)
+
+  container.innerHTML = "";  
+  const gameTiles = shuffle([...tiles]);
+  gameTiles.forEach(tile => {
+    container.appendChild(tile);
+  });
+}
+
+function shuffle(array) {
+  let index = array.length - 1;
+  while (index > 0) {
+    let randomIndex = Math.floor(Math.random() * (index + 1)); 
+    [array[index], array[randomIndex]] = [array[randomIndex], array[index]];  
+    index--;
+  }
+  return array;
+}
+
+function checkStatus() {
+  clearInterval(timeInterval);
 }
 
 container.addEventListener("dragstart", e => {
