@@ -64,9 +64,11 @@ function checkStatus() {
 }
 
 container.addEventListener("dragstart", e => {
+  console.log(e);
   const obj = e.target; // 드래그 한 위치의 target 속성
+  console.log(obj)
   dragged.el = obj;
-  dragged.className = obj.className;
+  dragged.class = obj.className;
   dragged.index = ([...obj.parentNode.children].indexOf(obj));
 })
 container.addEventListener("dragover", e => {
