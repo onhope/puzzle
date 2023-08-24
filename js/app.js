@@ -1,5 +1,6 @@
 const container = document.querySelector(".image-container");
 const StartButton = document.querySelector(".start-buton");
+const cheatKey = document.querySelector(".cheat-key");
 const playTime = document.querySelector(".play-time");
 const gameText = document.querySelector(".game-text");
 const tiles = document.querySelectorAll(".image-container > li");
@@ -14,6 +15,12 @@ const dragged = {
   class : null,
   index: null
 } 
+
+cheatKey.addEventListener("click", () => {
+  [...container.children].forEach((child) => {
+    child.innerText = child.getAttribute("data-type")
+  });
+})
 
 StartButton.addEventListener("click", () => {
   setGame();
