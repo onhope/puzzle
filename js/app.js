@@ -27,6 +27,8 @@ StartButton.addEventListener("click", () => {
 })
 
 function setGame() {
+  time = 0;
+  gameText.style.display = "none";
   timeInterval = setInterval( () => {
     time++;
     playTime.innerText = time;
@@ -56,9 +58,9 @@ function checkStatus() {
   })   
   if (unMatched.length === 0) {
     isPlaying = false;
-    clearInterval(timeInterval);    
+    clearInterval(timeInterval);
+    gameText.style.display = "block";
   }
-  console.log(unMatched);
 }
 
 container.addEventListener("dragstart", e => {
