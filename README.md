@@ -259,4 +259,6 @@ https://www.w3schools.com/jsref/jsref_indexof_array.asp
 **키워드**   
 shuffle    
 전개연산자[...] ,{...}   
-indexOf()
+indexOf()     
+nextSibling    
+previousSibling   
